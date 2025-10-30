@@ -72,7 +72,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_ik7up")
 anchors_preset = 15
 anchor_right = 1.0
