@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Game jam2"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/name="geijam-2"
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [rendering]
