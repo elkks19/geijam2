@@ -4,6 +4,23 @@
 [ext_resource type="Shader" uid="uid://cj5qkw3ceo5cd" path="res://shaders/occlusion.gdshader" id="1_ik7up"]
 [ext_resource type="Script" uid="uid://wpbq6mkqvtri" path="res://scripts/test.gd" id="2_ik7up"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0thx"]
+shader = ExtResource("1_ik7up")
+shader_parameter/exposure = 1.0
+shader_parameter/contrast = 1.05
+shader_parameter/saturation = 0.9
+shader_parameter/enable_pixelate = true
+shader_parameter/pixel_factor = 3.0
+shader_parameter/enable_posterize = true
+shader_parameter/color_levels = 16.0
+shader_parameter/dither_strength = 0.35
+shader_parameter/chrom_aberration = 0.07
+shader_parameter/vignette_strength = 1.0
+shader_parameter/grain_strength = 0.2
+shader_parameter/tint_color = Vector3(0.95, 1.03, 0.9)
+shader_parameter/tint_strength = 0.15
+shader_parameter/viewport_size_override = Vector2(0, 0)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ik7up"]
 resource_local_to_scene = true
 shader = ExtResource("1_gv7fy")
@@ -25,10 +42,6 @@ shader_parameter/color_quant_steps = 32.0
 shader_parameter/warble_amount = 0.002
 shader_parameter/warble_speed = 5.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0thx"]
-shader = ExtResource("1_ik7up")
-shader_parameter/size = Vector2(32, 28)
-
 [node name="Node3D" type="Node3D"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
@@ -47,6 +60,17 @@ spot_attenuation = -0.24
 spot_angle = 35.72
 spot_angle_attenuation = 0.70710677
 
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_ik7up")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_q0thx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 material = SubResource("ShaderMaterial_ik7up")
@@ -55,11 +79,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_q0thx")
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Node" type="Node" parent="."]
-script = ExtResource("2_ik7up")
