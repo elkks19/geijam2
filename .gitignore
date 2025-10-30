@@ -1,3 +1,15 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+*.apk
+*.exe
+*.zip
+*.pck
+*.tscn.converted
+
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
