@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://cio3biv3hi62a"]
+
+[ext_resource type="Shader" uid="uid://dbp1yk84bkgd7" path="res://shaders/crt.gdshader" id="1_gv7fy"]
+[ext_resource type="Shader" uid="uid://cj5qkw3ceo5cd" path="res://shaders/occlusion.gdshader" id="1_ik7up"]
+[ext_resource type="Script" uid="uid://wpbq6mkqvtri" path="res://scripts/test.gd" id="2_ik7up"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ik7up"]
+resource_local_to_scene = true
+shader = ExtResource("1_gv7fy")
+shader_parameter/grain_intensity = 0.1
+shader_parameter/min_lum = 0.0
+shader_parameter/max_lum = 1.0
+shader_parameter/time_scale = 0.5
+shader_parameter/vignette_darkness = 0.5
+shader_parameter/vignette_outer_radius = 0.7
+shader_parameter/vignette_inner_radius = 0.2
+shader_parameter/scanline_intensity = 0.2
+shader_parameter/barrel_distortion = 0.15
+shader_parameter/chromatic_aberration = 0.005
+shader_parameter/crt_vignette_power = 2.0
+shader_parameter/pixel_resolution_x = 320
+shader_parameter/pixel_resolution_y = 240
+shader_parameter/enable_color_quantization = true
+shader_parameter/color_quant_steps = 32.0
+shader_parameter/warble_amount = 0.002
+shader_parameter/warble_speed = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0thx"]
+shader = ExtResource("1_ik7up")
+shader_parameter/size = Vector2(32, 28)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0539551, 1.5821496, 1.379118)
+size = Vector3(3.1079102, 1, 1)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, -2, 2, 4)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.9971813, 0, -0.07503092, 0, 1, 0, 0.07503092, 0, 0.9971813, -0.24878407, 2.364358, 4.579836)
+light_energy = 1.82
+light_size = 0.25
+spot_range = 375.206
+spot_attenuation = -0.24
+spot_angle = 35.72
+spot_angle_attenuation = 0.70710677
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_ik7up")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_q0thx")
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_ik7up")
