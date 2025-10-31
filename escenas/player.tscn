@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwg3ct063jl0t"]
 
-[ext_resource type="Script" uid="uid://bma6uxckevefn" path="res://scripts/player.gd" id="1_esbpa"]
+[ext_resource type="Script" uid="uid://c01hxyjtxhdnf" path="res://scripts/player.gd" id="1_esbpa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_od3kr"]
 radius = 0.040039063
@@ -10,6 +10,11 @@ height = 0.15790752
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_esbpa")
+X_SENS = null
+Y_SENS = null
+WALKING_SPEED = null
+SPRINT_SPEED = null
+JUMP_VELOCITY = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(2.7906356, 0, 0, 0, 2.7906356, 0, 0, 0, 2.7906356, 0, 0.22026289, 0)
@@ -18,3 +23,8 @@ shape = SubResource("CapsuleShape3D_od3kr")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.21590525, 0, 0, 0, 0.21590525, 0, 0, 0, 0.21590525, 0, 0.21683718, 0)
 mesh = SubResource("CapsuleMesh_533ip")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.3393573, 0)
+enabled = false
+target_position = Vector3(0, -2, 0)
