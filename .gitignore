@@ -8,6 +8,7 @@
 *.pck
 *.tscn.converted
 
+node_modules
 
 # System-specific files
 .DS_Store
