@@ -13,10 +13,16 @@ extends CharacterBody3D
 @onready var neck = $neck
 @onready var camera = $neck/Camera3D
 
+@onready var color: ColorRect = $"../SHADERS/ColorRect"
+
+
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
+	if event.is_action_pressed("player_use_camera"):
+		color.visible =! color.visible
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	elif event.is_action_pressed("ui_cancel"):
