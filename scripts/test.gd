@@ -5,4 +5,3 @@ extends Node
 func _input(event):
 	if event.is_action_pressed("player_use_camera"):
 		color.visible = !color.visible
-		
