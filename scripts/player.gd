@@ -10,50 +10,55 @@ extends CharacterBody3D
 @export var LERP_VAL: float = 0.15
 @export var HEALTH: float = 100.0
 
-@onready var neck = $neck
-@onready var camera = $neck/Camera3D
-
+@onready var neck: Node3D = $neck
+@onready var camera: Camera3D = $neck/Camera3D
 @onready var color: ColorRect = $"../SHADERS/ColorRect"
 
-
-
-func _ready():
+func _ready() -> void:
+	add_to_group("player")                         # ← necesario para detección por grupo
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("player_use_camera"):
-		color.visible =! color.visible
+		color.visible = !color.visible
+
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	elif event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		
-	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		if event is InputEventMouseMotion:
-			neck.rotate_y(-event.relative.x * Y_SENS)
-			camera.rotate_x(-event.relative.y * X_SENS)
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
 
-var direction
-func _physics_process(delta):
-	# Aplicar gravedad
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED and event is InputEventMouseMotion:
+		neck.rotate_y(-event.relative.x * Y_SENS)
+		camera.rotate_x(-event.relative.y * X_SENS)
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
+
+var direction: Vector3
+
+func _physics_process(delta: float) -> void:
+	# 1) Publica tu posición para el enemigo
+	Global.player_current_pos = global_position     # ← clave para que el enemy te siga
+
+	# 2) Gravedad
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	
-	# Manejar movimiento
-	var input_dir = Input.get_vector("player_left", "player_right", "player_up", "player_down")
+
+	# 3) Movimiento
+	var input_dir := Input.get_vector("player_left", "player_right", "player_up", "player_down")
 	direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
-	if direction:
+
+	if direction != Vector3.ZERO:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-	
-	# Saltar
+		velocity.x = move_toward(velocity.x, 0.0, SPEED)
+		velocity.z = move_toward(velocity.z, 0.0, SPEED)
+
+	# 4) Salto
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	
+
 	move_and_slide()
+
+# (Opcional) si el enemigo llama a este método cuando te ve
+func enemy_can_see_call() -> void:
+	print("Enemy: ¡te veo!")
