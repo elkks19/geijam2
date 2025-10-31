@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cst5avnmqw3vr"]
+[gd_scene load_steps=7 format=3 uid="uid://cst5avnmqw3vr"]
 
 [ext_resource type="Terrain3DMaterial" uid="uid://deoc3vglh3sue" path="res://escenas/bosque_data/material_bosque.tres" id="1_vmd0d"]
 [ext_resource type="Terrain3DAssets" uid="uid://bpuso8ytvr3h" path="res://escenas/bosque_data/asset_bosque.tres" id="2_6e45s"]
 [ext_resource type="PackedScene" uid="uid://0irpfpg0b64y" path="res://assets/arb2/arb2.tscn" id="4_fub3l"]
 [ext_resource type="PackedScene" uid="uid://df2jome75bl1n" path="res://assets/arb4/arb4.tscn" id="4_vmd0d"]
 [ext_resource type="PackedScene" uid="uid://dwg3ct063jl0t" path="res://escenas/player.tscn" id="5_6e45s"]
+[ext_resource type="Script" uid="uid://66yqa7rj5s8" path="res://scripts/duende_spawner.gd" id="6_vv38w"]
 
 [node name="Bosque" type="Node3D"]
 
@@ -992,9 +993,12 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 161.08174, 4.0353184, -
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -17.496487, 0, 20.158733)
 
 [node name="Player" parent="." instance=ExtResource("5_6e45s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3553252, 1.4658694, 5.203456)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 2.3553252, 1.4658694, 5.203456)
 
 [node name="neck" type="Node3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28975725, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/neck"]
+
+[node name="DuendeSpawner" type="Node3D" parent="."]
+script = ExtResource("6_vv38w")
