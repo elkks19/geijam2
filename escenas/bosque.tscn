@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cst5avnmqw3vr"]
+[gd_scene load_steps=5 format=3 uid="uid://cst5avnmqw3vr"]
 
 [ext_resource type="Terrain3DMaterial" uid="uid://deoc3vglh3sue" path="res://escenas/bosque_data/material_bosque.tres" id="1_vmd0d"]
 [ext_resource type="Terrain3DAssets" uid="uid://bpuso8ytvr3h" path="res://escenas/bosque_data/asset_bosque.tres" id="2_6e45s"]
-[ext_resource type="PackedScene" uid="uid://dv0jf8v8a7wpa" path="res://assets/arb1/arb1.tscn" id="3_vv38w"]
 [ext_resource type="PackedScene" uid="uid://0irpfpg0b64y" path="res://assets/arb2/arb2.tscn" id="4_fub3l"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f63wm"]
@@ -20,282 +19,6 @@ metadata/_edit_lock_ = true
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9191631, 0)
 mesh = SubResource("CapsuleMesh_f63wm")
-
-[node name="arboles_old" type="Node3D" parent="."]
-visible = false
-
-[node name="Sketchfab_Scene" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -13.302392, 0, -3.0186348)
-
-[node name="Sketchfab_Scene4" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -30.892124, 0, 11.662235)
-
-[node name="Sketchfab_Scene5" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -17.46737, 0, 34.725662)
-
-[node name="Sketchfab_Scene6" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -44.982254, 4.1607265, 34.725662)
-
-[node name="Sketchfab_Scene7" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -44.982254, 4.429654, -16.245872)
-
-[node name="Sketchfab_Scene8" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -29.54335, 0.52290344, -16.245872)
-
-[node name="Sketchfab_Scene9" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -18.443455, 0.52290344, -27.580502)
-
-[node name="Sketchfab_Scene10" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.4591618, 0.52290344, -36.74693)
-
-[node name="Sketchfab_Scene11" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 12.791948, 2.6141593, -48.647144)
-
-[node name="Sketchfab_Scene33" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -13.302392, 0, 128.86464)
-
-[node name="Sketchfab_Scene34" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -30.892124, 0, 143.5455)
-
-[node name="Sketchfab_Scene35" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -17.46737, 0, 166.60893)
-
-[node name="Sketchfab_Scene36" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -44.982254, 4.1607265, 166.60893)
-
-[node name="Sketchfab_Scene37" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -52.40796, 2.058875, 115.62267)
-
-[node name="Sketchfab_Scene39" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -18.443455, 0.52290344, 104.302765)
-
-[node name="Sketchfab_Scene40" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.540411, 1.1205835, 101.442406)
-
-[node name="Sketchfab_Scene41" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 13.438919, -2.0169194, 95.60863)
-
-[node name="Sketchfab_Scene42" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.73977, 0, 128.86464)
-
-[node name="Sketchfab_Scene43" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 28.349855, 0.61743164, 136.26286)
-
-[node name="Sketchfab_Scene44" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 38.57479, 0, 166.60893)
-
-[node name="Sketchfab_Scene45" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 10.526669, -0.68797255, 170.08078)
-
-[node name="Sketchfab_Scene46" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 11.059906, -0.51738644, 115.6374)
-
-[node name="Sketchfab_Scene47" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 26.49881, 0.52290344, 115.6374)
-
-[node name="Sketchfab_Scene48" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 37.598705, 0.52290344, 104.302765)
-
-[node name="Sketchfab_Scene49" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 53.583, 0.52290344, 95.13634)
-
-[node name="Sketchfab_Scene50" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 68.83411, 5.197605, 83.23613)
-
-[node name="Sketchfab_Scene51" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -79.28012, 8.24782, 50.68367)
-
-[node name="Sketchfab_Scene52" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -96.86986, 5.341501, 65.36453)
-
-[node name="Sketchfab_Scene53" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -88.53676, 5.8957767, 100.38608)
-
-[node name="Sketchfab_Scene54" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -110.959984, 4.1607265, 88.42796)
-
-[node name="Sketchfab_Scene55" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -110.959984, 5.7561736, 37.45643)
-
-[node name="Sketchfab_Scene56" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.52108, 4.82911, 37.45643)
-
-[node name="Sketchfab_Scene57" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -84.42119, 8.933053, 26.121796)
-
-[node name="Sketchfab_Scene58" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -68.43689, 14.97554, 16.955368)
-
-[node name="Sketchfab_Scene59" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -53.185783, 6.389436, 5.0551605)
-
-[node name="Sketchfab_Scene60" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -79.28012, 7.5875854, 183.70476)
-
-[node name="Sketchfab_Scene61" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -85.7784, 6.9513264, 197.90685)
-
-[node name="Sketchfab_Scene62" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -83.4451, 4.459926, 221.44905)
-
-[node name="Sketchfab_Scene63" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -110.959984, 9.191643, 221.44905)
-
-[node name="Sketchfab_Scene64" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -110.959984, 9.395021, 170.47751)
-
-[node name="Sketchfab_Scene65" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.52108, 11.292767, 170.47751)
-
-[node name="Sketchfab_Scene66" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -84.42119, 6.2171288, 159.14288)
-
-[node name="Sketchfab_Scene67" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -68.43689, 3.229166, 149.97646)
-
-[node name="Sketchfab_Scene69" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -34.89158, 0, 222.13936)
-
-[node name="Sketchfab_Scene70" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -51.94134, 1.9238563, 236.30742)
-
-[node name="Sketchfab_Scene71" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -39.056557, 1.8388557, 259.88367)
-
-[node name="Sketchfab_Scene72" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -64.75819, 2.9496613, 262.12164)
-
-[node name="Sketchfab_Scene73" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -66.57144, 4.429654, 208.91211)
-
-[node name="Sketchfab_Scene74" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -51.132538, 0.52290344, 208.91211)
-
-[node name="Sketchfab_Scene75" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -40.032646, 0.52290344, 197.57748)
-
-[node name="Sketchfab_Scene76" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -24.048347, 0.52290344, 188.41106)
-
-[node name="Sketchfab_Scene77" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -12.290673, -1.0553207, 177.87071)
-
-[node name="Sketchfab_Scene78" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 31.669975, 0, 222.13936)
-
-[node name="Sketchfab_Scene79" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 14.080238, 0, 236.82022)
-
-[node name="Sketchfab_Scene80" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 27.504997, 0, 259.88367)
-
-[node name="Sketchfab_Scene81" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.009887695, 0.6242285, 259.88367)
-
-[node name="Sketchfab_Scene82" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.95308685, -1.2336702, 211.73593)
-
-[node name="Sketchfab_Scene83" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 15.429016, 0.52290344, 208.91211)
-
-[node name="Sketchfab_Scene84" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 26.528908, 0.52290344, 197.57748)
-
-[node name="Sketchfab_Scene85" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.513206, 0.52290344, 188.41106)
-
-[node name="Sketchfab_Scene86" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 57.764313, 2.6141593, 176.51085)
-
-[node name="Sketchfab_Scene87" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 113.13716, 0, 222.13936)
-
-[node name="Sketchfab_Scene88" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 95.547424, 11.430395, 236.82022)
-
-[node name="Sketchfab_Scene89" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 108.97218, 0, 259.88367)
-
-[node name="Sketchfab_Scene90" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 81.4573, 12.008461, 259.88367)
-
-[node name="Sketchfab_Scene91" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 81.4573, 5.869258, 208.91211)
-
-[node name="Sketchfab_Scene92" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 105.58735, 14.151052, 201.20906)
-
-[node name="Sketchfab_Scene93" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 107.99609, 0.52290344, 197.57748)
-
-[node name="Sketchfab_Scene94" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 123.98039, 12.521252, 188.41106)
-
-[node name="Sketchfab_Scene95" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 139.2315, 2.6141593, 176.51085)
-
-[node name="Sketchfab_Scene12" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -16.293499, 5.5437064, -49.027576)
-
-[node name="Sketchfab_Scene13" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 58.353493, 3.9644852, -3.0186348)
-
-[node name="Sketchfab_Scene14" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 40.76376, 3.9644852, 11.662235)
-
-[node name="Sketchfab_Scene15" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 54.188515, 5.676242, 34.725662)
-
-[node name="Sketchfab_Scene16" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 26.67363, 3.468625, 34.725662)
-
-[node name="Sketchfab_Scene17" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 26.67363, 0.58525753, -16.245872)
-
-[node name="Sketchfab_Scene18" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 42.112534, 4.4873886, -16.245872)
-
-[node name="Sketchfab_Scene19" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 53.21243, 4.4873886, -27.580502)
-
-[node name="Sketchfab_Scene20" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 69.196724, 4.4873886, -36.74693)
-
-[node name="Sketchfab_Scene21" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 84.44783, 12.269499, -48.647144)
-
-[node name="Sketchfab_Scene22" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 55.362385, 6.5757046, -49.027576)
-
-[node name="Sketchfab_Scene23" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 108.19489, 19.088142, -3.0186348)
-
-[node name="Sketchfab_Scene24" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 90.60516, 14.0639305, 11.662235)
-
-[node name="Sketchfab_Scene25" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 104.029915, 20.994734, 34.725662)
-
-[node name="Sketchfab_Scene26" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 76.51503, 12.209171, 34.725662)
-
-[node name="Sketchfab_Scene27" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 77.23246, 6.7662115, -20.897724)
-
-[node name="Sketchfab_Scene28" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 92.73201, 10.441515, -17.486252)
-
-[node name="Sketchfab_Scene29" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 107.21754, 12.921771, -27.580502)
-
-[node name="Sketchfab_Scene30" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 119.038124, 14.586834, -36.74693)
-
-[node name="Sketchfab_Scene31" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 133.94821, 12.041698, -49.957535)
-
-[node name="Sketchfab_Scene32" parent="arboles_old" instance=ExtResource("3_vv38w")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 105.20378, 16.67515, -49.027576)
 
 [node name="arboles_pinos" type="Node3D" parent="."]
 
@@ -345,13 +68,13 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 81.67717, -1.8594599, 8
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 98.09096, -1.8594599, 95.28065)
 
 [node name="Sketchfab_Scene37" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 98.09096, 19.959045, 44.04834)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 97.40443, 16.032198, 41.810165)
 
 [node name="Sketchfab_Scene34" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 81.67717, -1.8594599, 106.39292)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 81.67717, 3.268571, 106.39292)
 
 [node name="Sketchfab_Scene35" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 56.077614, -1.8594599, 121.38467)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 51.70274, -1.5359545, 122.13724)
 
 [node name="Sketchfab_Scene22" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -72.6668, 12.276782, 27.54499)
@@ -1113,7 +836,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 9.69466, -1.0500841, 16
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 131.84091, 4.970745, 155.12987)
 
 [node name="Sketchfab_Scene274" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 131.84091, 0, 116.37898)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 131.84091, 12.86915, 116.37898)
 
 [node name="Sketchfab_Scene275" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 159.0944, 5.9995575, 135.65443)
@@ -1164,7 +887,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 161.08174, 4.0353184, 1
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 111.79652, 0, -28.08844)
 
 [node name="Sketchfab_Scene291" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 116.398674, 4.1005793, -1.8404541)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 116.398674, 16.573471, -1.8404541)
 
 [node name="Sketchfab_Scene292" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 8.0746, -0.59202003, -22.23169)
@@ -1188,7 +911,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 71.47652, -1.8594599, 7
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 94.23497, -1.8594599, 67.02246)
 
 [node name="Sketchfab_Scene299" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 92.97121, -1.8594599, 107.62297)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 92.97121, 5.972287, 107.62297)
 
 [node name="Sketchfab_Scene300" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 112.82244, -1.8594599, 97.21611)
@@ -1197,10 +920,10 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 112.82244, -1.8594599, 
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 114.84208, -1.8594599, 57.41516)
 
 [node name="Sketchfab_Scene302" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 143.45581, -1.8594599, 64.66968)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 143.45581, 12.733924, 64.66968)
 
 [node name="Sketchfab_Scene303" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.41858, -1.8594599, 58.075012)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.41858, 4.282506, 58.075012)
 
 [node name="Sketchfab_Scene304" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 178.83237, -1.8594599, 65.8952)
@@ -1209,16 +932,16 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 178.83237, -1.8594599, 
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 178.83237, 11.331074, 14.662903)
 
 [node name="Sketchfab_Scene306" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.41858, -1.8594599, 77.00745)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.41858, 9.635943, 77.00745)
 
 [node name="Sketchfab_Scene307" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 136.81902, -1.8594599, 91.99919)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 136.81902, 16.748661, 91.99919)
 
 [node name="Sketchfab_Scene308" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 8.0746, -0.57143116, -1.8404541)
 
 [node name="Sketchfab_Scene309" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 131.84091, 4.970745, -9.993195)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 131.84091, 19.8102, -9.993195)
 
 [node name="Sketchfab_Scene310" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 131.84091, 0, -48.74408)
