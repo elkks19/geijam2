@@ -992,7 +992,9 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 161.08174, 4.0353184, -
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -17.496487, 0, 20.158733)
 
 [node name="Player" parent="." instance=ExtResource("5_6e45s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3553252, 1.4658694, 5.203456)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.57999206, 1.4658694, 19.176037)
+SPEED = 20.0
+JUMP_VELOCITY = 5.0
 
 [node name="neck" type="Node3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28975725, 0)

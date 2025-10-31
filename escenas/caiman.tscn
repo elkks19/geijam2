@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bre0ftrdomgsk"]
+
+[ext_resource type="Script" uid="uid://dflwf3d7wg1f0" path="res://scripts/caiman.gd" id="1_r5bix"]
+[ext_resource type="Texture2D" uid="uid://benb3pync3biw" path="res://assets/boteia/images.png" id="1_sychk"]
+[ext_resource type="ArrayMesh" uid="uid://bcsdhk8e5l07c" path="res://assets/boteia/Botella.obj" id="2_r5bix"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7lxfw"]
+size = Vector3(0.59332275, 1.5181427, 0.4072876)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcdks"]
+albedo_texture = ExtResource("1_sychk")
+
+[node name="CAIMAN" type="CharacterBody3D"]
+script = ExtResource("1_r5bix")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_7lxfw")
+
+[node name="Botella" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.45559332, 0, 0, 0, 0.3213849, 0, 0, 0, 0.36144626, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_vcdks")
+mesh = ExtResource("2_r5bix")
