@@ -39626,8 +39626,6 @@ transform = Transform3D(1, 0, 0, 0, -0.003141556, 0.9999951, 0, -0.9999951, -0.0
 mesh = SubResource("ArrayMesh_a48fl")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Door_hole003_Material #25_0"]
-
 [node name="Door_hole005_Material #25_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.003141556, 0.9999951, 0, -0.9999951, -0.003141556, 0, -0.0008096695, -5.2731484e-05)
 mesh = SubResource("ArrayMesh_m0la4")
