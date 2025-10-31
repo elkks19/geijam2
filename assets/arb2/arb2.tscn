@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://0irpfpg0b64y"]
+[gd_scene load_steps=3 format=3 uid="uid://0irpfpg0b64y"]
 
 [ext_resource type="PackedScene" uid="uid://bt38i74l67qts" path="res://assets/arbol2/arbol2.glb" id="1_geuev"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_geuev"]
+height = 2.078125
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_geuev")]
 
@@ -9,3 +12,9 @@ visible = false
 
 [node name="Cylinder_0" parent="Sketchfab_model/Root/Cylinder" index="0"]
 visible = false
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" index="0"]
+transform = Transform3D(0.7629049, 0, 0, 0, 2.9114544, 0, 0, 0, 0.9381158, -0.48036373, 3.1800995, -0.47600466)
+shape = SubResource("CylinderShape3D_geuev")
