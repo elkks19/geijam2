@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj56yvog6ovxa"
+uid="uid://hufixmw6d4pt"
 path.s3tc="res://.godot/imported/modular_kit_horror_house_104_pieces_1.png-c57272c81d98176a6a10c6eadf916b0c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "c4d851a58b830354a35cb209b508331b"
 }
 
 [deps]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b64it17dg1egv"]
+
+[ext_resource type="PackedScene" uid="uid://bdsjbcqvyvybx" path="res://assets/arbol1/arbol1.glb" id="1_a8iwf"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_a8iwf")]
+
+[node name="SketchUp" parent="Sketchfab_model/Collada visual scene group" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.857939, 0, 0)
+
+[node name="Material22069" parent="Sketchfab_model/Collada visual scene group/SketchUp" index="0"]
+visible = false
+
+[node name="Material22070" parent="Sketchfab_model/Collada visual scene group/SketchUp" index="1"]
+visible = false

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwg3ct063jl0t"]
+
+[ext_resource type="Script" uid="uid://bma6uxckevefn" path="res://scripts/player.gd" id="1_esbpa"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_od3kr"]
+radius = 0.040039063
+height = 0.15790752
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_533ip"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_esbpa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.7906356, 0, 0, 0, 2.7906356, 0, 0, 0, 2.7906356, 0, 0.22026289, 0)
+shape = SubResource("CapsuleShape3D_od3kr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.21590525, 0, 0, 0, 0.21590525, 0, 0, 0, 0.21590525, 0, 0.21683718, 0)
+mesh = SubResource("CapsuleMesh_533ip")
