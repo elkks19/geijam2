@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cst5avnmqw3vr"]
+[gd_scene load_steps=6 format=3 uid="uid://cst5avnmqw3vr"]
 
 [ext_resource type="Terrain3DMaterial" uid="uid://deoc3vglh3sue" path="res://escenas/bosque_data/material_bosque.tres" id="1_vmd0d"]
 [ext_resource type="Terrain3DAssets" uid="uid://bpuso8ytvr3h" path="res://escenas/bosque_data/asset_bosque.tres" id="2_6e45s"]
 [ext_resource type="PackedScene" uid="uid://0irpfpg0b64y" path="res://assets/arb2/arb2.tscn" id="4_fub3l"]
-[ext_resource type="Shader" uid="uid://cj5qkw3ceo5cd" path="res://shaders/occlusion.gdshader" id="5_fub3l"]
-[ext_resource type="Shader" uid="uid://dbp1yk84bkgd7" path="res://shaders/crt.gdshader" id="6_f63wm"]
-[ext_resource type="PackedScene" uid="uid://dwg3ct063jl0t" path="res://escenas/player.tscn" id="7_4dogb"]
-[ext_resource type="PackedScene" uid="uid://cqt2uoob5283e" path="res://escenas/CASA.tscn" id="8_f63wm"]
+[ext_resource type="PackedScene" uid="uid://df2jome75bl1n" path="res://assets/arb4/arb4.tscn" id="4_vmd0d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fub3l"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -1053,3 +1050,8 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 142.24524, 3.3895454, -
 
 [node name="Sketchfab_Scene325" parent="arboles_pinos" instance=ExtResource("4_fub3l")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 161.08174, 4.0353184, -61.28174)
+
+[node name="arboles_sauce" type="Node3D" parent="."]
+
+[node name="Sketchfab_Scene" parent="arboles_sauce" instance=ExtResource("4_vmd0d")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -17.496487, 0, 20.158733)

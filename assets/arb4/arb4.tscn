@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://df2jome75bl1n"]
+
+[ext_resource type="PackedScene" uid="uid://da2vykgfrcjd" path="res://assets/arbol4/arbol.glb" id="1_s0y8w"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_s0y8w")]
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, -3.9284105, 0, 1.8525109)
+
+[node name="Group30" parent="Sketchfab_model/Arbol_fbx/RootNode/Model/Componente_1_1" index="1"]
+visible = false
