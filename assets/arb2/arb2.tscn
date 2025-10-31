@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://0irpfpg0b64y"]
+
+[ext_resource type="PackedScene" uid="uid://bt38i74l67qts" path="res://assets/arbol2/arbol2.glb" id="1_geuev"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_geuev")]
+
+[node name="Cylinder" parent="Sketchfab_model/Root" index="2"]
+visible = false
+
+[node name="Cylinder_0" parent="Sketchfab_model/Root/Cylinder" index="0"]
+visible = false
