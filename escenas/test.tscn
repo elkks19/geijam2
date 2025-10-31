@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cio3biv3hi62a"]
+[gd_scene load_steps=13 format=3 uid="uid://cio3biv3hi62a"]
 
 [ext_resource type="Shader" uid="uid://dbp1yk84bkgd7" path="res://shaders/crt.gdshader" id="1_gv7fy"]
 [ext_resource type="Shader" uid="uid://cj5qkw3ceo5cd" path="res://shaders/occlusion.gdshader" id="1_ik7up"]
 [ext_resource type="Script" uid="uid://wpbq6mkqvtri" path="res://scripts/test.gd" id="2_ik7up"]
+[ext_resource type="PackedScene" uid="uid://dwg3ct063jl0t" path="res://escenas/player.tscn" id="4_ekebf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q0thx"]
 shader = ExtResource("1_ik7up")
@@ -42,23 +43,26 @@ shader_parameter/color_quant_steps = 32.0
 shader_parameter/warble_amount = 0.002
 shader_parameter/warble_speed = 5.0
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ekebf"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0539551, 1.5821496, 1.379118)
-size = Vector3(3.1079102, 1, 1)
+[sub_resource type="Sky" id="Sky_ee3db"]
+sky_material = SubResource("ProceduralSkyMaterial_ekebf")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.86602545, 0, -0.5, 0, 1, 0, 0.5, 0, 0.86602545, -2, 2, 4)
+[sub_resource type="Environment" id="Environment_wr7ib"]
+background_mode = 2
+sky = SubResource("Sky_ee3db")
+tonemap_mode = 2
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(0.9971813, 0, -0.07503092, 0, 1, 0, 0.07503092, 0, 0.9971813, -0.24878407, 2.364358, 4.579836)
-light_energy = 1.82
-light_size = 0.25
-spot_range = 375.206
-spot_attenuation = -0.24
-spot_angle = 35.72
-spot_angle_attenuation = 0.70710677
+[sub_resource type="PlaneMesh" id="PlaneMesh_ekebf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ee3db"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ekebf"]
+size = Vector3(1.8779297, 0.001, 1.9533691)
+
+[node name="nivel 1" type="Node3D"]
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("2_ik7up")
@@ -72,9 +76,31 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_ik7up")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wr7ib")
+
+[node name="Player" parent="." instance=ExtResource("4_ekebf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3553252, 0.032134175, 5.203456)
+
+[node name="neck" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28975725, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/neck"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(6.431198, 0, 0, 0, 1.8771565, 0, 0, 0, 6.705979, 4.736147, 0, 4.509678)
+mesh = SubResource("PlaneMesh_ekebf")
+surface_material_override/0 = SubResource("StandardMaterial3D_ee3db")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_ekebf")
