@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://drp3twjn1deia"]
+
+[ext_resource type="PackedScene" uid="uid://bdsjbcqvyvybx" path="res://assets/arbol1/arbol1.glb" id="1_qh7r2"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_qh7r2")]
