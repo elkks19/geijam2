@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cr7mea0av852o"
-path="res://.godot/imported/Untitled.blend-691a67d5f00ab2bd7cb69f96815a4eba.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/altar blender borrador/Untitled.blend"
-dest_files=["res://.godot/imported/Untitled.blend-691a67d5f00ab2bd7cb69f96815a4eba.scn"]
 
 [params]
 

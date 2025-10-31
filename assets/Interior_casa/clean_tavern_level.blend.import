@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://fywkwv8w5oy0"
-path="res://.godot/imported/clean_tavern_level.blend-75b6bf79fa646946ff08a9528b7284d3.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/Interior_casa/clean_tavern_level.blend"
-dest_files=["res://.godot/imported/clean_tavern_level.blend-75b6bf79fa646946ff08a9528b7284d3.scn"]
 
 [params]
 

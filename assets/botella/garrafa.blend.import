@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bg383c18jxa5u"
-path="res://.godot/imported/garrafa.blend-b0379c30845ab5122cc51956d593ade3.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/botella/garrafa.blend"
-dest_files=["res://.godot/imported/garrafa.blend-b0379c30845ab5122cc51956d593ade3.scn"]
 
 [params]
 
