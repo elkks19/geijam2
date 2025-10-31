@@ -1,8 +1,10 @@
-[gd_scene load_steps=1775 format=4 uid="uid://cqt2uoob5283e"]
+[gd_scene load_steps=1778 format=4 uid="uid://cqt2uoob5283e"]
 
 [ext_resource type="Texture2D" uid="uid://cvctnf7x8sijt" path="res://assets/casa2/modular_kit_horror_house_104_pieces_0.png" id="1_n38k5"]
 [ext_resource type="Texture2D" uid="uid://dj56yvog6ovxa" path="res://assets/casa2/modular_kit_horror_house_104_pieces_1.png" id="2_jbl1a"]
 [ext_resource type="Texture2D" uid="uid://decoyw53j5nqh" path="res://assets/casa2/modular_kit_horror_house_104_pieces_2.png" id="3_cv6cy"]
+[ext_resource type="Texture2D" uid="uid://c833ou12w2msx" path="res://assets/Interior_casa/textures/houseWall04.png" id="4_cv6cy"]
+[ext_resource type="ArrayMesh" uid="uid://d07ssdxyq0f53" path="res://assets/Interior_casa/clean_tavern_level.obj" id="5_o7eut"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8q7i"]
 resource_name = "Material_25"
@@ -28493,6 +28495,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gvxev")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7eut"]
+albedo_texture = ExtResource("4_cv6cy")
+
 [node name="entorno" type="Node3D"]
 metadata/_edit_group_ = true
 
@@ -32924,4 +32929,20 @@ transform = Transform3D(1, 0, 0, 0, -0.003141556, 0.9999951, 0, -0.9999951, -0.0
 mesh = SubResource("ArrayMesh_xc7jo")
 skeleton = NodePath("")
 
+[node name="Door_hole009_Material #25_1" type="MeshInstance3D" parent="CASA"]
+transform = Transform3D(1, 0, 0, 0, -0.003141556, 0.9999951, 0, -0.9999951, -0.003141556, 13.19846, -0.0008096695, -7.3918495)
+mesh = SubResource("ArrayMesh_sj51g")
+skeleton = NodePath("")
+
+[node name="door006_Material #25_1" type="MeshInstance3D" parent="CASA"]
+transform = Transform3D(1.2945981, 0, 0, 0, -0.0031411808, 1.0380033, 0, -0.9998757, -0.0032609615, 23.472046, -0.0008096695, -7.6826706)
+mesh = SubResource("ArrayMesh_5w1qa")
+skeleton = NodePath("")
+
 [node name="ADICIONALES" type="Node3D" parent="."]
+
+[node name="CleanTavernLevel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.024525562, 0, -2.4417706, 0, 1.3968173, 0, 1.4682096, 0, 0.040788308, 36.760796, -4.9042625, 122.86605)
+material_override = SubResource("StandardMaterial3D_o7eut")
+mesh = ExtResource("5_o7eut")
+metadata/_edit_group_ = true
